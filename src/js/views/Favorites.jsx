@@ -12,11 +12,13 @@ const Favorites = () => {
 
     return (
         <div>
+            <h1 className='text-center title yellow fs-2 mt-4'>Favorites</h1>
             <div className="container d-flex p-4">
                 <div className="row d-flex g-4 mt-4 w-100">
                     {store.favorites.map((item, index) => {
+                        let fav = store.favorites.some(favItem => favItem.url === item.url)
                         return (
-                            <div className="col-3" key={index} ><CardView dato={item} status={true} /></div>
+                            <div className="col-3" key={`${item.url}fav`} ><CardView dato={item} status={fav} /></div>
                         )
                     })}
                 </div>

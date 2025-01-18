@@ -1,14 +1,15 @@
 
-import React from "react"
+import React, { useContext } from "react"
 import { useNavigate } from "react-router"
 import Logo from "../../img/logo.png"
+import { Context } from "../store/appContext"
 import styles from "../../styles/navbar.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faMagnifyingGlass, faStar, faFloppyDisk, faHouse } from "@fortawesome/free-solid-svg-icons"
+import { faStar, faFloppyDisk, faHouse } from "@fortawesome/free-solid-svg-icons"
 const NavBar = () => {
 
     const navigateTO = useNavigate();
-
+    const { store, actions } = useContext(Context)
     const barNavigation = (e) => {
         navigateTO(e.target.name)
     }
@@ -29,7 +30,7 @@ const NavBar = () => {
                         <li className="nav-item mx-2">
                             <a className={`nav-link ${styles.links}`} name='/databank' onClick={(e) => barNavigation(e)} href="/databank"><FontAwesomeIcon className="text-warning align-items-center me-2 mt-1" icon={faFloppyDisk} />Databank</a></li>
                         <li className="nav-item mx-2">
-                            <a className={`nav-link ${styles.links}`} name='/favorites' onClick={(e) => barNavigation(e)} href="#"><FontAwesomeIcon className="text-warning align-items-center me-2 mt-1" icon={faStar} />Favorites</a>
+                            <a className={`nav-link ${styles.links}`} name='/favorites' onClick={(e) => barNavigation(e)} href="#"><div className="d-flex me-2"><FontAwesomeIcon className="text-warning align-items-center me-2 mt-1" icon={faStar} /><span> {`${store.favorites.length}`} </span></div>Favorites</a>
                         </li>
                     </ul>
                 </div>

@@ -49,7 +49,7 @@ const CardView = ({ dato, status }) => {
 
     return (
         <div className={`card px-0 mx-0 ${styles.cardsize}`}>
-            <img src={`https://starwars-visualguide.com//assets/img/${dato.url.split('/').at(-2) === 'people' ? 'characters' : dato.url.split('/').at(-2)}/${dato.uid}.jpg`} className={`card-img-top w-100 ${styles.image}`} alt="Star Wars Image" />
+            <img src={`https://starwars-visualguide.com//assets/img/${dato.url.split('/').at(-2) === 'people' ? 'characters' : dato.url.split('/').at(-2)}/${dato.uid}.jpg`} className={`card-img-top w-100 ${styles.image}`} alt="No image available" />
             <div className="card-body text-center mt-2">
                 <h5 className="card-title title text-dark fs-6">{dato.name}</h5>
                 <div className="d-flex h-100 justify-content-between align-self- mt-2">

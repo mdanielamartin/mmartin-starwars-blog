@@ -54,7 +54,7 @@ const DataBank = () => {
                     {store[request].results?.map((item, index) => {
                         let fav = store.favorites.some(favItem => favItem.url === item.url)
                         return (
-                            <div className="col-lg-3" key={index} ><CardView dato={item} status={fav} /></div>
+                            <div className="col-lg-3" key={item.url} ><CardView dato={item} status={fav} /></div>
                         )
                     })}
                 </div>
