@@ -9,15 +9,7 @@ const Home = () => {
 
     const { store, actions } = useContext(Context);
     const navigateTO = useNavigate();
-    const handleGetHome = async () => {
-        try {
-            await actions.getHome('people')
-            await actions.getHome('planets')
-            await actions.getHome('vehicles')
-        } catch (e) {
-            console.error(e)
-        }
-    }
+
 
     const handleNavigation = async (e) => {
         actions.setTab(e.target.name);
@@ -27,9 +19,7 @@ const Home = () => {
         }
 
     }
-    useEffect(() => {
-        handleGetHome();
-    }, [])
+
 
     return (
         < div className='container-fluid mb-4'>

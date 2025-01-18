@@ -53,8 +53,12 @@ const DataBank = () => {
                 <div className="row d-flex justify-content-center g-4 mt-4">
                     {store[request].results?.map((item, index) => {
                         let fav = store.favorites.some(favItem => favItem.url === item.url)
+                        if (store[request].results.length < 3) {
+                            return (<div className="col justify-content-center align-items-center" key={item.url} ><CardView dato={item} status={fav} /></div>)
+                        }
+
                         return (
-                            <div className="col-lg-3" key={item.url} ><CardView dato={item} status={fav} /></div>
+                            <div className="col-lg-4 justify-content-center align-items-center" key={item.url} ><CardView dato={item} status={fav} /></div>
                         )
                     })}
                 </div>

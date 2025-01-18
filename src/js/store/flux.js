@@ -26,6 +26,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 
+			saveDetails: ()=>{
+				const store = getStore();
+				localStorage.setItem('singleView',JSON.stringify(store['singleView']));
+			},
+
+			getDetailsLocal: () =>{
+				const store = getStore();
+				const detailLocal = localStorage.getItem('singleView');
+				const detailStore = detailLocal ? JSON.parse(detailLocal) : [];
+				setStore({...store,singleView:detailStore})
+				return true;
+			},
+
 			getDatabank: async (request)=>{
 				const store = getStore();
 				try{
@@ -57,6 +70,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			updateStore: async (url,request) => {
 				const store = getStore();
+				if (url===null){
+					return;
+				}
 				try{
 					const res = await fetch(url);
 					if (!res.ok){

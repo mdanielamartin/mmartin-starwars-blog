@@ -16,3 +16,7 @@
     color: white;
     display: flex;
 }
+
+.links:hover{
+    cursor: pointer;
+}

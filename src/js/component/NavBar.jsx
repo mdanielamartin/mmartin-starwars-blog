@@ -25,12 +25,12 @@ const NavBar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 me-3 mb-lg-0">
                         <li className="nav-item mx-2">
-                            <a className={`nav-link ${styles.links}`} name='/' onClick={(e) => barNavigation(e)} aria-current="page" href="#"><FontAwesomeIcon className="text-warning align-items-center me-2 mt-1" icon={faHouse} />Home</a>
+                            <a className={`nav-link ${styles.links}`} name='/' onClick={barNavigation} aria-current="page"><FontAwesomeIcon className="text-warning align-items-center me-2 mt-1" icon={faHouse} />Home</a>
                         </li>
                         <li className="nav-item mx-2">
-                            <a className={`nav-link ${styles.links}`} name='/databank' onClick={(e) => barNavigation(e)} href="/databank"><FontAwesomeIcon className="text-warning align-items-center me-2 mt-1" icon={faFloppyDisk} />Databank</a></li>
+                            <a className={`nav-link ${styles.links}`} name='/databank' onClick={barNavigation}><FontAwesomeIcon className="text-warning align-items-center me-2 mt-1" icon={faFloppyDisk} />Databank</a></li>
                         <li className="nav-item mx-2">
-                            <a className={`nav-link ${styles.links}`} name='/favorites' onClick={(e) => barNavigation(e)} href="#"><div className="d-flex me-2"><FontAwesomeIcon className="text-warning align-items-center me-2 mt-1" icon={faStar} /><span> {`${store.favorites.length}`} </span></div>Favorites</a>
+                            <a className={`nav-link ${styles.links}`} name='/favorites' onClick={barNavigation}><div className="d-flex me-2"><FontAwesomeIcon className="text-warning align-items-center me-2 mt-1" icon={faStar} /><span> {`${store.favorites.length}`} </span></div>Favorites</a>
                         </li>
                     </ul>
                 </div>

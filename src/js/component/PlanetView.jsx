@@ -14,7 +14,7 @@ const PlanetView = () => {
         switch (display) {
             case 'Physical':
                 return (
-                    <ul class="regular fs-5 lh-lg">
+                    <ul className="regular fs-5 lh-lg">
                         <li><strong>Diameter:</strong>{` ${render.diameter} km`}</li>
                         <li><strong>Gravity:</strong>{` ${render.gravity}`}</li>
                         <li><strong>Surface Water:</strong>{` ${render.surface_water} %`}</li>
@@ -22,14 +22,14 @@ const PlanetView = () => {
                 )
             case 'Rotation':
                 return (
-                    <ul class="regular fs-5 lh-lg">
+                    <ul className="regular fs-5 lh-lg">
                         <li><strong>Rotational Period:</strong>{` ${render.rotation_period} hours`}</li>
                         <li><strong>Orbital Period:</strong>{` ${render.orbital_period} days`}</li>
                     </ul>
                 )
             case 'Environment':
                 return (
-                    <ul class="regular fs-5 lh-lg">
+                    <ul className="regular fs-5 lh-lg">
                         <li><strong>Population:</strong>{` ${render.population} inhabitants`}</li>
                         <li><strong>Climate:</strong>{` ${render.climate}`}</li>
                         <li><strong>Terrain:</strong>{` ${render.terrain}`}</li>
@@ -41,15 +41,15 @@ const PlanetView = () => {
 
     return (
         <div className="row w-100">
-            <ul class="nav nav-tabs background-card rounded-top-4">
-                <li class="nav-item">
-                    <button class={`buttons background-card regular p-3 fs-5 border-0 rounded-4 ${display === 'Physical' ? 'bg-light' : ''}`} name="Physical" onClick={(e) => setDisplay(e.target.name)} aria-current="page">Physical Characteristics</button>
+            <ul className="nav nav-tabs background-card rounded-top-4">
+                <li className="nav-item">
+                    <button className={`buttons background-card regular p-3 fs-5 border-0 rounded-4 ${display === 'Physical' ? 'bg-light' : ''}`} name="Physical" onClick={(e) => setDisplay(e.target.name)} aria-current="page">Physical Characteristics</button>
                 </li>
-                <li class="nav-item">
-                    <button class={`buttons background-card regular p-3 fs-5 border-0 rounded-4 ${display === 'Rotation' ? 'bg-light' : ''}`} name='Rotation' onClick={(e) => setDisplay(e.target.name)} aria-current="page">Orbit & Rotation</button>
+                <li className="nav-item">
+                    <button className={`buttons background-card regular p-3 fs-5 border-0 rounded-4 ${display === 'Rotation' ? 'bg-light' : ''}`} name='Rotation' onClick={(e) => setDisplay(e.target.name)} aria-current="page">Orbit & Rotation</button>
                 </li>
-                <li class="nav-item">
-                    <button class={`buttons background-card regular p-3 fs-5 border-0 rounded-4 ${display === 'Environment' ? 'bg-light' : ''}`} name='Environment' onClick={(e) => setDisplay(e.target.name)} aria-current="page">Environment & Demographics</button>
+                <li className="nav-item">
+                    <button className={`buttons background-card regular p-3 fs-5 border-0 rounded-4 ${display === 'Environment' ? 'bg-light' : ''}`} name='Environment' onClick={(e) => setDisplay(e.target.name)} aria-current="page">Environment & Demographics</button>
                 </li>
             </ul>
 
