@@ -1,0 +1,38 @@
+.buttons{
+    font-family: 'Zen Dots','serif';
+    background-color: #ffec1c;
+}
+
+.buttons:hover{
+    background-color: #ffc107;
+}
+
+.regular{
+    font-family: 'Coda','serif';
+    font-size: large;
+    font-weight: 400;
+    color: black;
+}
+
+.title{
+    font-family: 'Zen Dots','serif';
+    color: black;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.background {
+    background-color: black;
+}
+
+.background-card {
+    background-color:  #ffec1c;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.yellow {
+    color: #ffec1c;
+}

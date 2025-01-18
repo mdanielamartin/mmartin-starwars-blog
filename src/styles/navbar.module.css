@@ -1,0 +1,14 @@
+.logo{
+    border-radius: 50%;
+    width: 25%;
+    height: auto;
+}
+
+.links{
+    font-family: 'Coda', serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: x-large;
+    color: white;
+    display: flex;
+}

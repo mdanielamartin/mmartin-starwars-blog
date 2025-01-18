@@ -1,0 +1,18 @@
+.main{
+    font-family: 'Zen Dots';
+    font-weight: 500;
+    font-style: normal;
+    font-size:4.5rem;
+    text-align: center;
+    color:  #ffec1c;
+}
+
+.buttons{
+    font-family: 'Zen Dots';
+    background-color: #ffec1c;
+    border-radius: 55px;
+}
+
+.buttons:hover{
+    background-color: #ffc107;
+}

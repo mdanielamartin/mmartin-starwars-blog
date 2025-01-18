@@ -1,0 +1,17 @@
+.image {
+    border: solid 12px  #ffec1c;
+object-fit: cover;
+height:225px;
+
+}
+.cardsize
+{ min-height: 365px;
+    max-height: 450px;/* Set a minimum height for the card */ }
+
+@media (max-width: 576px) {
+     .image { height: 200px; /* Adjust the height for smaller screens */ } }
+
+
+
+@media (max-width: 576px) {
+     .cardsize { min-height: 350px; }}
