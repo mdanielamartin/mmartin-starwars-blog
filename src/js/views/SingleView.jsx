@@ -1,5 +1,4 @@
 import React, { useEffect, useContext, useState } from "react";
-import Rigo from "../../img/rigo-baby.jpg"
 import '../../styles/global.css'
 import styles from '../../styles/single.module.css'
 import { Context } from "../store/appContext.js";

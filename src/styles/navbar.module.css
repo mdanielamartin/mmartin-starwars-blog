@@ -4,6 +4,10 @@
     height: auto;
 }
 
+.logo:hover{
+    cursor: pointer;
+}
+
 .links{
     font-family: 'Coda', serif;
     font-weight: 400;

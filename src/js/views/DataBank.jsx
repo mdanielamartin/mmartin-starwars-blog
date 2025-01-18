@@ -21,6 +21,7 @@ const DataBank = () => {
 
     const handleRequest = (e) => {
         setRequest(e.target.name)
+        actions.setTab(e.target.name)
     }
     useEffect(() => {
         handleStart();

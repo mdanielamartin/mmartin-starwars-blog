@@ -10,13 +10,12 @@ const NavBar = () => {
     const navigateTO = useNavigate();
 
     const barNavigation = (e) => {
-
         navigateTO(e.target.name)
     }
     return (
         <nav className="navbar bg-dark navbar-expand-lg border-bottom border-body" data-bs-theme="dark">
             <div className="container-fluid d-flex justify-content-between">
-                <a className="navbar-brand" href="#">
+                <a className="navbar-brand" name='/' onClick={barNavigation}>
                     <img src={Logo} className={styles.logo} alt="Site logo" />
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
